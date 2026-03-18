@@ -1,0 +1,9 @@
+{
+  "approved": false,
+  "issues": [
+    {
+      "area": "testing coverage",
+      "feedback": "The spec verifies executability only with `test -x hello.sh`, which checks the current filesystem state but not whether the executable bit is correctly tracked by Git for the repository change. If the goal is for the repo itself to preserve executable permissions, add a repository-level check such as verifying the file mode in Git metadata."
+    }
+  ]
+}

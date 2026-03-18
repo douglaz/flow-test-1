@@ -1,60 +1,33 @@
-## Summary
+Create a new executable Bash script named `hello.sh` at the repository root. This is a greenfield change. The repository currently contains `README.md` and `.ralph/` metadata only. Do not modify any existing file, and do not create any file other than `hello.sh`.
 
-Add a `hello.sh` Bash script to the repository root that prints `Hello, World!` to stdout. This is a greenfield addition to a minimal project that currently contains only a `README.md`. No existing scripts or utilities exist to reuse.
-
-## Acceptance Criteria
-
-- `hello.sh` exists at the repository root
-- File begins with `#!/usr/bin/env bash` shebang line
-- Running `./hello.sh` outputs exactly `Hello, World!` (with newline)
-- File has executable permissions (`chmod +x`)
-- Git tracks the file with executable mode (`100755`)
-
-## Technical Approach
-
-The project is a near-empty repository with only a `README.md` and `.ralph/` config directory. There are no existing shell scripts, utilities, or patterns to reuse.
-
-The implementation is a single new file at the repository root:
+Use this exact file content:
 
 ```bash
 #!/usr/bin/env bash
-echo "Hello, World!"
+printf 'Hello, World!\n'
 ```
 
-Use `#!/usr/bin/env bash` over `#!/bin/bash` for portability across systems where Bash may not be at `/bin/bash` (e.g., NixOS, some macOS configurations).
+Requirements:
+- `hello.sh` must exist at `./hello.sh`
+- The first line must be exactly `#!/usr/bin/env bash`
+- The file must use LF line endings and plain ASCII text
+- Running `./hello.sh` from the repository root must write exactly `Hello, World!` followed by a single newline to stdout
+- The script must exit with status `0`
+- The script must not write anything to stderr
+- The file must be executable on disk
+- Git must track `hello.sh` in the index with mode `100755`
 
-After creating the file, run `chmod +x hello.sh` before staging so that Git records the file with mode `100755`, preserving executable permissions for all clones.
+Implementation notes:
+- After creating the file, ensure the executable bit is set and recorded in Git. Use either `chmod +x hello.sh && git add hello.sh` or `git add --chmod=+x hello.sh`
+- Do not modify `README.md`, anything under `.ralph/`, or any other existing file
+- Do not add tests, CI configuration, argument parsing, localization, or any additional scripts
 
-## Files & Modules
+Verification steps:
+1. `test -x hello.sh`
+2. `head -1 hello.sh | diff -u - <(printf '#!/usr/bin/env bash\n')`
+3. `./hello.sh | diff -u - <(printf 'Hello, World!\n')`
+4. `./hello.sh >/dev/null; test "$?" -eq 0`
+5. `stderr="$(./hello.sh 2>&1 >/dev/null)"; test -z "$stderr"`
+6. `git ls-files -s hello.sh | grep -Eq '^100755 '`
 
-| File | Action | Description |
-|------|--------|-------------|
-| `hello.sh` | **Create** | New executable Bash script at repo root |
-
-No existing files are modified.
-
-## Testing Strategy
-
-1. **Permission check (filesystem)**: `test -x hello.sh` — verify executable bit is set on disk
-2. **Permission check (Git metadata)**: `git ls-files -s hello.sh` — confirm the staged file mode is `100755`, ensuring executable permissions are preserved across clones
-3. **Shebang check**: `head -1 hello.sh` — confirm it starts with `#!/usr/bin/env bash`
-4. **Output check**: `./hello.sh` — confirm stdout is exactly `Hello, World!`
-5. **Exit code check**: Verify the script exits with status `0`
-
-Validation one-liner:
-```bash
-./hello.sh | diff - <(echo "Hello, World!") && echo "PASS" || echo "FAIL"
-```
-
-Git permission validation:
-```bash
-git ls-files -s hello.sh | grep -q '^100755' && echo "PASS" || echo "FAIL"
-```
-
-## Out of Scope
-
-- Argument parsing or parameterized greetings
-- Localization / i18n
-- Integration with any build system or CI pipeline
-- Adding tests to a test framework (none exists in this project)
-- Modifications to `README.md`
+Task is complete only when all verification commands pass from the repository root.
