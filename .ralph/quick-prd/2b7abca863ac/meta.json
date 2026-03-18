@@ -1,0 +1,15 @@
+{
+  "idea": "Create hello.txt\n\nCreate a file called hello.txt with the content 'Hello, World\\!' on a single line.",
+  "idea_hash": "2b7abca863ac",
+  "writer_backend": "claude",
+  "reviewer_backend": "claude",
+  "started_at": "2026-03-18T22:44:47Z",
+  "completed_at": "2026-03-18T22:45:12Z",
+  "revision_count": 0,
+  "approved": true,
+  "draft_time_secs": 21.35728231,
+  "review_times_secs": [
+    3.82911781
+  ],
+  "revision_times_secs": []
+}
