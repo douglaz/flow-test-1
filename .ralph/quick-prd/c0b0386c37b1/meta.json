@@ -1,0 +1,17 @@
+{
+  "idea": "Create a simple Python script in the repository root.\n\n**Requirements:**\n- File name: `hello.py`\n- Content: a single `print` statement outputting `Hello, World!`\n- No dependencies, no argparse, no boilerplate — just the print statement\n\n**Acceptance criteria:**\n- [ ] `hello.py` exists at the repository root\n- [ ] Running `python hello.py` prints exactly `Hello, World!` to stdout\n- [ ] File contains only the print statement (no shebang, no comments, no functions)",
+  "idea_hash": "c0b0386c37b1",
+  "writer_backend": "claude",
+  "reviewer_backend": "codex",
+  "started_at": "2026-03-18T21:35:07Z",
+  "completed_at": "2026-03-18T21:36:06Z",
+  "revision_count": 1,
+  "approved": false,
+  "draft_time_secs": 21.375893078,
+  "review_times_secs": [
+    27.885865898
+  ],
+  "revision_times_secs": [
+    9.830236185
+  ]
+}

@@ -1,3 +1,21 @@
+---
+artifact: prompt-review
+project: issue-1
+backend: codex(gpt-5.4-xhigh)
+role: prompt_reviewer
+created_at: 2026-03-18T21:37:12Z
+---
+
+# Prompt Review
+
+## Issues Found
+- The prompt does not say whether `stderr` must be empty. An implementation could meet the stdout check while still emitting warnings or errors.
+- The validation examples use Bash-specific process substitution (`<(...)`). That is less portable and can fail in environments that execute tests with `sh`.
+- The statement that the repository "currently contains only a `README.md`" is brittle project-state context, not a durable requirement. If the repo changes, that line becomes stale and can mislead downstream loops.
+- The file-content constraint is expressed as several overlapping rules. Replacing that with one exact-content requirement is clearer and easier to test.
+- The prompt assumes validation is run from the repository root with `python` on `PATH`, but it does not state those assumptions explicitly. That matters for repeatable execution.
+
+## Refined Prompt
 ### Summary
 
 Create a new file `hello.py` at the repository root. When run with `python hello.py` from the repository root, it must print `Hello, World!` to standard output and exit successfully.
