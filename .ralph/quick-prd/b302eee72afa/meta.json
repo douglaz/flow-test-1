@@ -1,0 +1,15 @@
+{
+  "idea": "Create a fortune.txt file\n\nCreate a file called fortune.txt with the content 'The best time to plant a tree was 20 years ago.' on a single line.",
+  "idea_hash": "b302eee72afa",
+  "writer_backend": "claude",
+  "reviewer_backend": "claude",
+  "started_at": "2026-03-19T01:56:38Z",
+  "completed_at": "2026-03-19T01:57:03Z",
+  "revision_count": 0,
+  "approved": true,
+  "draft_time_secs": 20.104861369,
+  "review_times_secs": [
+    4.247888736
+  ],
+  "revision_times_secs": []
+}
