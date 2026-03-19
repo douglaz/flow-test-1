@@ -1,0 +1,15 @@
+{
+  "idea": "Add a Fibonacci function in Python\n\nCreate a file called fib.py with a function fibonacci(n) that returns the nth Fibonacci number. Include a main block that prints fibonacci(10).",
+  "idea_hash": "bd3f78844403",
+  "writer_backend": "claude",
+  "reviewer_backend": "claude",
+  "started_at": "2026-03-19T18:52:16Z",
+  "completed_at": "2026-03-19T18:52:44Z",
+  "revision_count": 0,
+  "approved": true,
+  "draft_time_secs": 22.565850827,
+  "review_times_secs": [
+    5.341374276
+  ],
+  "revision_times_secs": []
+}
