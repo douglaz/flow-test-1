@@ -1,0 +1,8 @@
+{
+  "id": "PR-16-pull_comment-2962104614",
+  "body": "PR review comment by @chatgpt-codex-connector[bot] on .ralph/tmp/logs/issue-15-001-implementer.log:4:\n\n**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Remove per-run Ralph logs from the commit**\n\nWhen this repo is pushed or shared, this file publishes run-local metadata that is unrelated to `fibonacci()`—including absolute paths, session IDs, installed plugin names, and model trace content—and it will be regenerated on every future automation run. That both leaks internal tooling details to anyone with repo access and creates constant noisy churn/conflicts in later PRs, so `.ralph/tmp/logs/*` artifacts should stay untracked.\n\nUseful? React with 👍 / 👎.",
+  "priority": "P2",
+  "source": "pr-review",
+  "source_detail": "pr#16/pull_comment#2962104614",
+  "created_at": "2026-03-19T22:40:13.818698260Z"
+}
