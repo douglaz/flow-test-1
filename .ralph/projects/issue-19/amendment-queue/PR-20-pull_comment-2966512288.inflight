@@ -1,0 +1,8 @@
+{
+  "id": "PR-20-pull_comment-2966512288",
+  "body": "PR review comment by @chatgpt-codex-connector[bot] on .ralph/tmp/logs/issue-19-001-implementer.log:3:\n\n**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Drop Ralph runtime logs and state from git**\n\nThis is a per-run transcript with a timestamp, temp working directory, session IDs, and local tool metadata; the same kind of generated state is being committed elsewhere under `.ralph/tmp/logs`, `.lock`, and `.last-prompt-hash`. If a contributor runs Ralph again, these files will be rewritten immediately, leaving the repo dirty and creating noisy conflicts unrelated to source changes.\n\nUseful? React with 👍 / 👎.",
+  "priority": "P2",
+  "source": "pr-review",
+  "source_detail": "pr#20/pull_comment#2966512288",
+  "created_at": "2026-03-20T15:43:41.387154553Z"
+}
