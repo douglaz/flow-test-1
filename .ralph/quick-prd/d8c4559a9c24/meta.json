@@ -1,0 +1,15 @@
+{
+  "idea": "Add a prime checker script\n\nCreate a Python script called is_prime.py with a function is_prime(n) that returns True if n is prime. Include a main block that prints results for 1-20.",
+  "idea_hash": "d8c4559a9c24",
+  "writer_backend": "claude",
+  "reviewer_backend": "claude",
+  "started_at": "2026-03-20T14:15:34Z",
+  "completed_at": "2026-03-20T14:16:22Z",
+  "revision_count": 0,
+  "approved": true,
+  "draft_time_secs": 36.509638894,
+  "review_times_secs": [
+    12.032830103
+  ],
+  "revision_times_secs": []
+}
