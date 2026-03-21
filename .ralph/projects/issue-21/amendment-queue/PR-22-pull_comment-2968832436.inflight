@@ -1,0 +1,8 @@
+{
+  "id": "PR-22-pull_comment-2968832436",
+  "body": "PR review comment by @chatgpt-codex-connector[bot] on reverse.py:1:\n\n**<sub><sub>![P1 Badge](https://img.shields.io/badge/P1-orange?style=flat)</sub></sub>  Treat EOF on stdin as an empty input line**\n\nWhen stdin is genuinely empty (for example `printf '' | python3 reverse.py` or `python3 reverse.py < empty.txt`), `input()` raises `EOFError` and the script exits with status 1 instead of printing an empty line. That violates the explicit \"handles empty input\" requirement for a common pipeline/file-redirection case, so this needs an EOF fallback rather than calling `input()` unguarded.\n\nUseful? React with 👍 / 👎.",
+  "priority": "P2",
+  "source": "pr-review",
+  "source_detail": "pr#22/pull_comment#2968832436",
+  "created_at": "2026-03-21T03:05:24.389034910Z"
+}
