@@ -1,0 +1,15 @@
+{
+  "idea": "Implement a Python CLI script `greet.py` that greets a user by name or defaults to \"World\" if no name is provided.\n\n**Requirements:**\n- Use `sys.argv` for argument parsing (no `argparse` or third-party libraries)\n- Accept an optional positional argument: the name to greet\n- Output must go to stdout\n\n**Acceptance Criteria:**\n- [ ] File is named `greet.py`\n- [ ] Running `python greet.py Alice` prints `Hello, Alice!`\n- [ ] Running `python greet.py` (no argument) prints `Hello, World!`\n- [ ] Uses `sys.argv` for argument parsing\n- [ ] No external dependencies required",
+  "idea_hash": "5aecb13de92d",
+  "writer_backend": "claude",
+  "reviewer_backend": "codex",
+  "started_at": "2026-03-18T22:27:50Z",
+  "completed_at": "2026-03-18T22:28:36Z",
+  "revision_count": 0,
+  "approved": true,
+  "draft_time_secs": 22.194548055,
+  "review_times_secs": [
+    24.301236905
+  ],
+  "revision_times_secs": []
+}
