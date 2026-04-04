@@ -1,0 +1,17 @@
+{
+  "idea": "Create a simple executable Bash script that prints a greeting to standard output.\n\n**Requirements:**\n- File name: `hello.sh`\n- Must include a proper shebang line (`#!/bin/bash` or `#!/usr/bin/env bash`)\n- Must print exactly `Hello, World!` to stdout\n- File must be executable (chmod +x)\n\n**Acceptance Criteria:**\n- [ ] `hello.sh` exists in the repository\n- [ ] File begins with a valid shebang line\n- [ ] Running `./hello.sh` outputs `Hello, World!`\n- [ ] File has executable permissions set",
+  "idea_hash": "c41caa2cb7a0",
+  "writer_backend": "claude",
+  "reviewer_backend": "codex",
+  "started_at": "2026-03-18T21:59:37Z",
+  "completed_at": "2026-03-18T22:00:45Z",
+  "revision_count": 1,
+  "approved": false,
+  "draft_time_secs": 23.303208218,
+  "review_times_secs": [
+    34.90558502
+  ],
+  "revision_times_secs": [
+    10.332809563
+  ]
+}
